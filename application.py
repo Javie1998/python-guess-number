@@ -1,13 +1,16 @@
 print "Welcome\n"
 from random import randrange
-conteo = 0
-
+count = 0
+"""number = ""
+ran_num"""
 def aleatorio():
-	numero = input("Insert a number\n")
+	number = input("Insert a number\n")
 	ran_num = randrange(1,20)
-	if  numero > ran_num :
+	if  number > ran_num :
 		print "You guess to high please try again"
-#while conteo < 4:
+	elif number < ran_num:
+		print "you guess too low, please try again"
+	#elif num == incognito:
 
 #conteo = conteo + 1
 
