@@ -1,10 +1,10 @@
 print "Welcome\n"
-from random import randrange #importa "randrange" de random
+from random import randrange 
 
-number = input("Insert a number\n") #pide al usuario que ingrese un numero 
-ran_num = randrange(1,20) #genera un numero aleatorio del 1 al 20
+number = input("Insert a number\n") #asks the user to enter a number 
+ran_num = randrange(1,20) #here we create a random number
 	
-	#verifica si el numero ingresado es mayor o menor que el generado
+	#here we verified if the number is lower or is higher than the random number
 if  number > ran_num : 
 	print "You guess to high please try again"
 elif number < ran_num:
