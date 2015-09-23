@@ -4,12 +4,15 @@ print "Welcome\n"
 from random import randrange
 RAN_NUM = randrange(1, 21)
 COUNT = 0
-NUMBER = int(raw_input("Insert a number\n"))
-if NUMBER > RAN_NUM:
-    print "You guess to high, please try again\n"
-elif NUMBER < RAN_NUM:
-    print "you guess too low, please try again\n"
-elif NUMBER == RAN_NUM:#if the number is equals to the random number it will show "you win"
-    print "YOU WIN\n"
-   
-    
+while COUNT < 4:
+    NUMBER = int(raw_input("Insert a number\n"))
+    if NUMBER > RAN_NUM:#
+        print "You guess to high, please try again\n"
+    elif NUMBER < RAN_NUM:
+        print "you guess too low, please try again\n"
+    elif NUMBER == RAN_NUM:
+        print "YOU WIN\n"
+    COUNT += 1
+    if COUNT == 4:
+        print "GAME OVER"
+       
