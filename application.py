@@ -4,7 +4,7 @@ import sys
 import os
 from random import randrange
 
-COUNT = 0  
+COUNT = 0
 while COUNT < 4:
     print "This is your "+str(COUNT +1) + " turn"
     RAN_NUM = randrange(1, 21)
@@ -19,6 +19,7 @@ while COUNT < 4:
         ANSWER.lower()
         if ANSWER == "y" or ANSWER == "yes":
             COUNT = 0
+            os.system("cls")
         elif ANSWER == "n" or ANSWER == "no":
             sys.exit()
     COUNT += 1
@@ -28,5 +29,7 @@ while COUNT < 4:
         ANSWER.lower()
         if ANSWER == "y" or ANSWER == "yes":
             COUNT = 0
+            os.system("cls")
         elif ANSWER == "n" or ANSWER == "no":
             sys.exit()
+            
