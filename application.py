@@ -24,14 +24,18 @@ while COUNT < 4:
             elif ANSWER == "n" or ANSWER == "no":
                 sys.exit()
         COUNT += 1
-        if COUNT == 4:
-            print "GAME OVER"
-            ANSWER = raw_input("Do you want to play again y/n?\n")
-            ANSWER.lower()
-            if ANSWER == "y" or ANSWER == "yes":
-                COUNT = 0
-                os.system("cls")
-            elif ANSWER == "n" or ANSWER == "no":
-                sys.exit()
+        try:
+            if COUNT == 4:
+                print "GAME OVER"
+                ANSWER = raw_input("Do you want to play again y/n?\n")
+                ANSWER.lower()
+                ANSWER.isalpha()
+                if ANSWER == "y" or ANSWER == "yes":
+                    COUNT = 0
+                    os.system("cls")
+                elif ANSWER == "n" or ANSWER == "no":
+                    sys.exit()
+        except ValueError:
+            print "Insert only y or n\n"
     except ValueError:
         print "Insert only integer numbers"
