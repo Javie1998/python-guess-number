@@ -4,8 +4,11 @@ import sys
 import os
 from random import randrange
 COUNT = 0
-RAN_NUM = randrange(1, 21)
+
+
 while COUNT < 4:
+    if COUNT == 0:
+        RAN_NUM = randrange(1, 21)
     print "This is your turn number: "+str(COUNT +1)
     try:
         NUMBER = int(raw_input("Insert a number from 1 to 20\n"))
@@ -25,8 +28,7 @@ while COUNT < 4:
                 QUEST = True
                 while QUEST == True:
                     ANSWER = raw_input("Do you want to play again y/n?\n")
-                    ANSWER.lower()
-                    ANSWER.isalpha()
+                    ANSWER = ANSWER.lower()
                     if ANSWER == "y" or ANSWER == "yes":
                         COUNT = 0
                         QUEST = False
