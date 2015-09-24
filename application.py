@@ -35,10 +35,13 @@ while COUNT < 4:
                         os.system("cls")
                     elif ANSWER == "n" or ANSWER == "no":
                         QUEST = False
+                        print "Thanks for play, come back soon\n"
+                        raw_input("Press enter")
                         sys.exit()
+
                     else:
                         print "Insert only y/n\n"
         except ValueError:
             print "Insert only y or n\n"
     except ValueError:
-        print "Insert only integer numbers"
+        print "Insert only integer numbers\n"
