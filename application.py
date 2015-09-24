@@ -1,4 +1,13 @@
 """This is an application that generate a random number"""
+print 
+
+
+
+
+
+
+
+
 print "Welcome\n"
 import sys
 import os
@@ -33,6 +42,7 @@ while COUNT < 4:
                         COUNT = 0
                         QUEST = False
                         os.system("cls")
+                        os.system("clear")
                     elif ANSWER == "n" or ANSWER == "no":
                         QUEST = False
                         print "Thanks for play, come back soon\n"
