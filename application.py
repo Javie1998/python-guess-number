@@ -14,7 +14,7 @@ while COUNT < 4:
             print "You guess to high, please try again\n"
         elif NUMBER < RAN_NUM:
             print "you guess too low, please try again\n"
-        elif NUMBER == RAN_NUM:
+        elif (NUMBER == RAN_NUM) and (ANSWER.isalpha() == True):
             print "YOU WIN\n"
             ANSWER = raw_input("Do you want to play again y/n?\n")
             ANSWER.lower()
@@ -22,18 +22,18 @@ while COUNT < 4:
                 COUNT = 0
                 os.system("cls")
             elif ANSWER == "n" or ANSWER == "no":
+                ANSWER.isalpha()
                 sys.exit()
         COUNT += 1
         try:
-            if COUNT == 4:
+            if (COUNT == 4) and (ANSWER.isalpha() == True):
                 print "GAME OVER"
                 ANSWER = raw_input("Do you want to play again y/n?\n")
                 ANSWER.lower()
-                ANSWER.isalpha()
                 if ANSWER == "y" or ANSWER == "yes":
                     COUNT = 0
                     os.system("cls")
-                elif ANSWER == "n" or ANSWER == "no":
+                elif ANSWER == "n" or ANSWER == "no":    
                     sys.exit()
         except ValueError:
             print "Insert only y or n\n"
