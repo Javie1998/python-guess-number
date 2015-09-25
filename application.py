@@ -8,8 +8,7 @@ print """
                             |------ You have to use only Integer Numbers--------|
                             |-------------You only have 4 turns-----------------|
                             |-----------------Enjoy it!! n.n--------------------|
-                            =====================================================        
-                                     \n"""
+                            =====================================================\n"""
 
 import sys
 import os
@@ -25,7 +24,7 @@ while COUNT < 4:
     try: #try serves to make excepts in the errors of the program
         NUMBER = int(raw_input("Insert a number from 1 to 20\n"))
         if NUMBER > RAN_NUM:
-            print """***You guess to high, please try again***\n"""
+            print """***You guess too high, please try again***\n"""
         elif NUMBER < RAN_NUM:
             print """***you guess too low, please try again***\n"""
         elif NUMBER == RAN_NUM:
@@ -37,6 +36,7 @@ while COUNT < 4:
         try:   #serves to make excepts in the errors of the program
             if COUNT == 4:
                 print "GAME OVER "
+                print "***the number was***\n" + str(RAN_NUM)
                 QUEST = True
 
                 while QUEST == True: #it checks the two possibles answers of the user
@@ -56,10 +56,9 @@ while COUNT < 4:
                         """
                     elif ANSWER == "n" or ANSWER == "no":
                         QUEST = False
-                        print "Thanks for play, come back soon, We hope to see you again!! *--*\n"
+                        print "Thanks for play, come back soon, We hope to see you again!! *--*\n"                        
                         raw_input("Press enter")
                         sys.exit()
-
                     else:
                         print "Insert only y/n\n"
         except ValueError:
